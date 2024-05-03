@@ -160,7 +160,8 @@ class _signupState extends State<signup> {
               ),
               ElevatedButton(
                   onPressed: () {
-                    Provider.of<Signupprovider>(context,listen: false).postData();
+                    Provider.of<Signupprovider>(context, listen: false)
+                        .postData();
                   },
                   child: Text("SignUp"))
             ],

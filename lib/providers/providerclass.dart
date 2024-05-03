@@ -30,7 +30,7 @@ class Signupprovider extends ChangeNotifier {
               "password": password,
               "age": age
             }));
-            
+
     if (response.statusCode == 200) {
       print(response.body);
     } else {
