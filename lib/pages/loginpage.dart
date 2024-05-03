@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:new_user_acc/pages/signup.dart';
+import 'package:new_user_acc/providers/loginprovider.dart';
+import 'package:provider/provider.dart';
 
 class loginpage extends StatefulWidget {
   const loginpage({super.key});
@@ -11,6 +13,7 @@ class loginpage extends StatefulWidget {
 class _loginpageState extends State<loginpage> {
   @override
   Widget build(BuildContext context) {
+    final loginprovider = Provider.of<Loginprovider>(context);
     return Scaffold(
       backgroundColor: Color.fromRGBO(37, 50, 55, 1),
       appBar: AppBar(
@@ -23,6 +26,10 @@ class _loginpageState extends State<loginpage> {
           child: Column(
             children: [
               TextField(
+                onChanged: (value) {
+                  loginprovider.email1;
+                },
+                style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                     hintText: "Email",
                     hintStyle: TextStyle(color: Colors.white),
@@ -37,6 +44,10 @@ class _loginpageState extends State<loginpage> {
                 height: 10,
               ),
               TextField(
+                onChanged: (value) {
+                  loginprovider.password1;
+                },
+                style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                     hintText: "Password",
                     hintStyle: TextStyle(color: Colors.white),
