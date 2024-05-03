@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_user_acc/signup.dart';
+import 'package:new_user_acc/pages/signup.dart';
 
 class loginpage extends StatefulWidget {
   const loginpage({super.key});
@@ -51,6 +51,7 @@ class _loginpageState extends State<loginpage> {
                 height: 10,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(onPressed: () {}, child: Text("Login")),
                   SizedBox(
